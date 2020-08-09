@@ -29,14 +29,16 @@ class API {
     getAll = (props) => {
         let queryParams = '?';
         let queries = [];
+
         if (props.limit)
             queries.push(`_limit=${props.limit}`);
         if (props.page)
             queries.push(`_page=${props.page}`);
         queryParams += queries.join('&');
+
         return Axios.get(props.url + queryParams)
             .then(response => {
-                // console.log(response);
+                console.log(response.data);
                 // props.setState({
                 //     data: response.data,
                 //     count: response.headers['x-total-count']

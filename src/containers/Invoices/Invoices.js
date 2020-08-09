@@ -18,7 +18,7 @@ const Invoices = (props) => {
     const [columns, setColumns] = useState(null);
 
     const mergeProcessor = (invoices, vendors) => {
-        console.log('mewr', invoices, vendors);
+        console.log('merge', invoices, vendors);
         let vendorsHash = {};
         vendors.data.map(vendor => {
             vendorsHash[vendor.vendorId] = vendor;
@@ -44,10 +44,11 @@ const Invoices = (props) => {
             url: props.config.dataEndPoints.call3.getAll,
             setState: setVendors
         })
-        Promise.all([Promise.resolve(getInvoices), Promise.resolve(getVendors)])
+        Promise.all([getInvoices, getVendors])
             .then((invoices, vendors) => {
-                mergeProcessor(invoices.data, vendors.data);
-                console.log(invoices, vendors);
+                console.log(invoices.count, vendors);
+                Promise.all([invoices, vendors])
+                .then((invoices, vendors) => mergeProcessor(invoices, vendors));
             })
         
     }, [params.get('page')])
