@@ -47,8 +47,7 @@ const Invoices = (props) => {
         Promise.all([getInvoices, getVendors])
             .then((invoices, vendors) => {
                 console.log(invoices.count, vendors);
-                Promise.all([invoices, vendors])
-                .then((invoices, vendors) => mergeProcessor(invoices, vendors));
+                // mergeProcessor(invoices, vendors);
             })
         
     }, [params.get('page')])

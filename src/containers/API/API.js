@@ -39,10 +39,10 @@ class API {
         return Axios.get(props.url + queryParams)
             .then(response => {
                 console.log(response.data);
-                // props.setState({
-                //     data: response.data,
-                //     count: response.headers['x-total-count']
-                // });
+                props.setState({
+                    data: response.data,
+                    count: response.headers['x-total-count']
+                });
                 return {
                     data: response.data,
                     count: response.headers['x-total-count']
