@@ -28,17 +28,23 @@ class API {
 
     getAll = (props) => {
         let queryParams = '?';
+        let queries = [];
         if (props.limit)
-            queryParams += `_limit=${props.limit}`;
+            queries.push(`_limit=${props.limit}`);
         if (props.page)
-            queryParams += `_page=${props.page}`;
-        Axios.get(props.url + queryParams)
+            queries.push(`_page=${props.page}`);
+        queryParams += queries.join('&');
+        return Axios.get(props.url + queryParams)
             .then(response => {
-                console.log(response);
-                props.setState({
+                // console.log(response);
+                // props.setState({
+                //     data: response.data,
+                //     count: response.headers['x-total-count']
+                // });
+                return {
                     data: response.data,
                     count: response.headers['x-total-count']
-                })
+                };
             })
             .catch(error => {
                 console.log(error);

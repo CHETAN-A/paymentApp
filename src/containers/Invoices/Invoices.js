@@ -1,26 +1,59 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Space } from 'antd';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import API from '../../containers/API/API';
 
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
+
 const Invoices = (props) => {
+    let history = useHistory();
+    let params = useQuery();
 
     const [api,] = useState(new API());
     const [invoices, setInvoices] = useState(null);
     const [vendors, setVendors] = useState(null);
     const [columns, setColumns] = useState(null);
 
+    const mergeProcessor = (invoices, vendors) => {
+        console.log('mewr', invoices, vendors);
+        let vendorsHash = {};
+        vendors.data.map(vendor => {
+            vendorsHash[vendor.vendorId] = vendor;
+        })
+        let invoiceDetails = invoices.data.map(invoice => {
+            return {
+                ...invoice,
+                vendor: {...vendorsHash[invoice.vendorId]}
+            }
+        })
+        setInvoices(invoiceDetails);
+        // setVendors(vendors);
+    }
+
     useEffect(() => {
-        api.getAll({
+        const getInvoices = api.getAll({
             url: props.config.dataEndPoints.call2.getAll,
             setState: setInvoices,
             limit: 10,
-            page: 1
+            page: params.get('page') | 0
         });
-        api.getAll({
+        const getVendors = api.getAll({
             url: props.config.dataEndPoints.call3.getAll,
             setState: setVendors
-        });
+        })
+        Promise.all([Promise.resolve(getInvoices), Promise.resolve(getVendors)])
+            .then((invoices, vendors) => {
+                mergeProcessor(invoices.data, vendors.data);
+                console.log(invoices, vendors);
+            })
+        
+    }, [params.get('page')])
+
+    useEffect(() => {
+        // console.log(`params ${params}`);
         setColumns(getColumns());
     }, [])
 
@@ -40,11 +73,14 @@ const Invoices = (props) => {
                 {
                     title: 'Action',
                     key: 'action',
-                    render: (text, record) => (
-                        <Space size="middle">
-                            <a>Pay</a>
-                        </Space>
-                    ),
+                    render: (text, record) => {
+                        console.log(record.amountDue);
+                        return (
+                            <Space size="middle">
+                                <a>Pay</a>
+                            </Space>
+                        )
+                    },
                 }
             )
         return columns;
@@ -53,7 +89,17 @@ const Invoices = (props) => {
     return (
         <div>
             {columns && invoices ?
-                <Table columns={columns} dataSource={invoices.data} />
+                <Table
+                    columns={columns}
+                    dataSource={invoices.data}
+                    pagination={{
+                        total: invoices.count,
+                        current: params.get('page'),
+                        onChange: (pageNo) => history.push(`?page=${pageNo}`),
+                        simple: true,
+                        position: 'bottomCenter'
+                    }}
+                />
                 : null}
         </div>
     )
