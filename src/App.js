@@ -36,8 +36,8 @@ const App = (props) => {
         <div className="container">
           {config ?
             <Switch>
-              <Route exact path='/' component={() => <MainApp config={config} />} />
-              <Route exact path='/invoices' component={() => <Invoices config={config} />} />
+              <Route path='/invoices' component={() => <Invoices config={config} />} />
+              <Route path='/' component={() => <MainApp config={config} />} />
               <Route component={Error404} />
             </Switch>
             : <Spin />}
