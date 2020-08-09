@@ -5,7 +5,7 @@ module.exports = function() {
         return faker.random.alphaNumeric(3)
     })
     return {
-        invoices: _.times(100, function (n) {
+        invoices: _.times(30, function (n) {
             return {
                 id: n,
                 vendorId: faker.random.arrayElement(vendorIds),
