@@ -2,255 +2,255 @@
   "invoices": [
     {
       "id": 0,
-      "vendorId": "aqf",
-      "invoiceId": 542,
-      "quantity": 0,
-      "product": "Chicken",
-      "amountBal": "303.91",
-      "amountDue": "236.90",
-      "invoiceDate": "2020-04-11T12:02:08.483Z"
+      "vendorId": "fy3",
+      "invoiceId": 770,
+      "quantity": 3,
+      "product": "Chair",
+      "amountBal": "392.88",
+      "amountDue": "219.62",
+      "invoiceDate": "2020-03-04T10:12:25.615Z"
     },
     {
       "id": 1,
-      "vendorId": "taq",
-      "invoiceId": 424,
-      "quantity": 10,
-      "product": "Computer",
-      "amountBal": "440.23",
-      "amountDue": "369.44",
-      "invoiceDate": "2019-08-30T08:03:15.814Z"
+      "vendorId": "fy3",
+      "invoiceId": 77,
+      "quantity": 1,
+      "product": "Gloves",
+      "amountBal": "327.74",
+      "amountDue": "412.42",
+      "invoiceDate": "2018-10-25T18:29:24.194Z"
     },
     {
       "id": 2,
-      "vendorId": "wz0",
-      "invoiceId": 494,
-      "quantity": 7,
-      "product": "Tuna",
-      "amountBal": "289.10",
-      "amountDue": "325.03",
-      "invoiceDate": "2020-03-26T06:25:50.091Z"
+      "vendorId": "7u2",
+      "invoiceId": 716,
+      "quantity": 4,
+      "product": "Shoes",
+      "amountBal": "60.28",
+      "amountDue": "479.28",
+      "invoiceDate": "2019-07-09T06:36:16.914Z"
     },
     {
       "id": 3,
-      "vendorId": "8kk",
-      "invoiceId": 698,
-      "quantity": 2,
-      "product": "Cheese",
-      "amountBal": "219.40",
-      "amountDue": "187.00",
-      "invoiceDate": "2019-03-27T10:00:37.628Z"
+      "vendorId": "q4v",
+      "invoiceId": 100,
+      "quantity": 8,
+      "product": "Ball",
+      "amountBal": "314.28",
+      "amountDue": "408.27",
+      "invoiceDate": "2019-08-25T06:18:39.264Z"
     },
     {
       "id": 4,
-      "vendorId": "8kk",
-      "invoiceId": 425,
-      "quantity": 3,
-      "product": "Chicken",
-      "amountBal": "298.61",
-      "amountDue": "191.11",
-      "invoiceDate": "2020-08-02T05:12:32.701Z"
+      "vendorId": "ysw",
+      "invoiceId": 364,
+      "quantity": 4,
+      "product": "Mouse",
+      "amountBal": "244.15",
+      "amountDue": "326.39",
+      "invoiceDate": "2019-10-12T13:57:26.664Z"
     },
     {
       "id": 5,
-      "vendorId": "f61",
-      "invoiceId": 579,
-      "quantity": 6,
-      "product": "Soap",
-      "amountBal": "461.74",
-      "amountDue": "2.96",
-      "invoiceDate": "2018-12-19T14:01:42.678Z"
+      "vendorId": "fy3",
+      "invoiceId": 398,
+      "quantity": 5,
+      "product": "Shoes",
+      "amountBal": "37.32",
+      "amountDue": "346.34",
+      "invoiceDate": "2019-09-23T21:35:31.563Z"
     },
     {
       "id": 6,
-      "vendorId": "3or",
-      "invoiceId": 592,
-      "quantity": 3,
-      "product": "Towels",
-      "amountBal": "159.76",
-      "amountDue": "408.69",
-      "invoiceDate": "2019-08-30T20:20:16.466Z"
+      "vendorId": "k2f",
+      "invoiceId": 911,
+      "quantity": 9,
+      "product": "Table",
+      "amountBal": "9.75",
+      "amountDue": "245.96",
+      "invoiceDate": "2019-11-06T17:06:23.507Z"
     },
     {
       "id": 7,
-      "vendorId": "je1",
-      "invoiceId": 866,
-      "quantity": 2,
-      "product": "Computer",
-      "amountBal": "6.98",
-      "amountDue": "301.59",
-      "invoiceDate": "2020-02-28T08:08:09.406Z"
+      "vendorId": "r5o",
+      "invoiceId": 950,
+      "quantity": 6,
+      "product": "Pants",
+      "amountBal": "62.43",
+      "amountDue": "498.72",
+      "invoiceDate": "2019-12-25T00:05:51.365Z"
     },
     {
       "id": 8,
-      "vendorId": "ntr",
-      "invoiceId": 229,
-      "quantity": 9,
-      "product": "Soap",
-      "amountBal": "99.87",
-      "amountDue": "446.71",
-      "invoiceDate": "2019-11-30T03:12:57.146Z"
+      "vendorId": "9aq",
+      "invoiceId": 872,
+      "quantity": 0,
+      "product": "Hat",
+      "amountBal": "296.18",
+      "amountDue": "240.78",
+      "invoiceDate": "2018-11-15T16:17:09.594Z"
     },
     {
       "id": 9,
-      "vendorId": "i02",
-      "invoiceId": 81,
-      "quantity": 9,
-      "product": "Bike",
-      "amountBal": "263.97",
-      "amountDue": "363.20",
-      "invoiceDate": "2020-01-20T03:41:23.175Z"
+      "vendorId": "fy3",
+      "invoiceId": 781,
+      "quantity": 7,
+      "product": "Keyboard",
+      "amountBal": "72.23",
+      "amountDue": "299.26",
+      "invoiceDate": "2019-05-25T04:55:33.854Z"
     },
     {
       "id": 10,
-      "vendorId": "9in",
-      "invoiceId": 216,
-      "quantity": 5,
-      "product": "Cheese",
-      "amountBal": "31.07",
-      "amountDue": "363.41",
-      "invoiceDate": "2020-04-15T23:36:59.778Z"
+      "vendorId": "k2f",
+      "invoiceId": 488,
+      "quantity": 6,
+      "product": "Gloves",
+      "amountBal": "136.49",
+      "amountDue": "492.13",
+      "invoiceDate": "2019-03-20T05:52:12.805Z"
     },
     {
       "id": 11,
-      "vendorId": "uhu",
-      "invoiceId": 967,
-      "quantity": 6,
-      "product": "Chair",
-      "amountBal": "191.40",
-      "amountDue": "172.77",
-      "invoiceDate": "2019-08-07T07:55:32.317Z"
+      "vendorId": "b05",
+      "invoiceId": 793,
+      "quantity": 1,
+      "product": "Sausages",
+      "amountBal": "430.19",
+      "amountDue": "259.41",
+      "invoiceDate": "2018-08-21T01:44:51.266Z"
     },
     {
       "id": 12,
-      "vendorId": "taq",
-      "invoiceId": 527,
-      "quantity": 0,
-      "product": "Fish",
-      "amountBal": "103.77",
-      "amountDue": "349.08",
-      "invoiceDate": "2019-09-30T00:37:08.030Z"
+      "vendorId": "fy3",
+      "invoiceId": 387,
+      "quantity": 9,
+      "product": "Sausages",
+      "amountBal": "262.25",
+      "amountDue": "216.27",
+      "invoiceDate": "2019-04-12T19:03:45.375Z"
     },
     {
       "id": 13,
-      "vendorId": "i02",
-      "invoiceId": 221,
-      "quantity": 8,
-      "product": "Sausages",
-      "amountBal": "67.10",
-      "amountDue": "65.16",
-      "invoiceDate": "2020-06-30T11:39:55.195Z"
+      "vendorId": "7u2",
+      "invoiceId": 200,
+      "quantity": 0,
+      "product": "Computer",
+      "amountBal": "94.01",
+      "amountDue": "284.81",
+      "invoiceDate": "2020-04-23T05:04:59.466Z"
     },
     {
       "id": 14,
-      "vendorId": "aqf",
-      "invoiceId": 481,
-      "quantity": 4,
-      "product": "Ball",
-      "amountBal": "365.20",
-      "amountDue": "303.22",
-      "invoiceDate": "2020-03-25T10:38:22.039Z"
+      "vendorId": "ysw",
+      "invoiceId": 431,
+      "quantity": 7,
+      "product": "Bacon",
+      "amountBal": "311.23",
+      "amountDue": "216.45",
+      "invoiceDate": "2018-09-27T23:40:17.822Z"
     },
     {
       "id": 15,
-      "vendorId": "z2o",
-      "invoiceId": 305,
-      "quantity": 3,
-      "product": "Salad",
-      "amountBal": "179.51",
-      "amountDue": "149.36",
-      "invoiceDate": "2020-06-08T11:26:09.432Z"
+      "vendorId": "q4v",
+      "invoiceId": 439,
+      "quantity": 8,
+      "product": "Tuna",
+      "amountBal": "273.09",
+      "amountDue": "211.89",
+      "invoiceDate": "2020-05-02T21:49:40.287Z"
     },
     {
       "id": 16,
-      "vendorId": "ntr",
-      "invoiceId": 624,
-      "quantity": 5,
-      "product": "Shoes",
-      "amountBal": "381.19",
-      "amountDue": "55.70",
-      "invoiceDate": "2019-12-19T23:39:44.568Z"
+      "vendorId": "k2f",
+      "invoiceId": 986,
+      "quantity": 4,
+      "product": "Table",
+      "amountBal": "287.65",
+      "amountDue": "246.74",
+      "invoiceDate": "2018-11-23T22:23:59.797Z"
     },
     {
       "id": 17,
-      "vendorId": "taq",
-      "invoiceId": 876,
-      "quantity": 0,
-      "product": "Towels",
-      "amountBal": "131.48",
-      "amountDue": "362.52",
-      "invoiceDate": "2018-08-26T01:19:44.658Z"
+      "vendorId": "7u2",
+      "invoiceId": 377,
+      "quantity": 10,
+      "product": "Gloves",
+      "amountBal": "391.22",
+      "amountDue": "6.57",
+      "invoiceDate": "2018-11-16T10:28:17.550Z"
     },
     {
       "id": 18,
-      "vendorId": "ntr",
-      "invoiceId": 674,
-      "quantity": 4,
-      "product": "Bacon",
-      "amountBal": "370.93",
-      "amountDue": "119.67",
-      "invoiceDate": "2019-01-13T02:03:33.302Z"
+      "vendorId": "9aq",
+      "invoiceId": 937,
+      "quantity": 0,
+      "product": "Bike",
+      "amountBal": "153.32",
+      "amountDue": "142.85",
+      "invoiceDate": "2018-09-01T04:47:52.746Z"
     },
     {
       "id": 19,
-      "vendorId": "f61",
-      "invoiceId": 819,
-      "quantity": 8,
-      "product": "Shirt",
-      "amountBal": "124.01",
-      "amountDue": "456.63",
-      "invoiceDate": "2019-11-14T08:39:00.981Z"
+      "vendorId": "ysw",
+      "invoiceId": 832,
+      "quantity": 0,
+      "product": "Soap",
+      "amountBal": "220.64",
+      "amountDue": "306.18",
+      "invoiceDate": "2020-03-30T17:35:16.085Z"
     }
   ],
   "vendors": [
     {
-      "vendorId": "taq",
-      "vendorName": "Stamm, Trantow and Oberbrunner",
-      "creditBal": "378.99"
+      "vendorId": "05z",
+      "vendorName": "Rolfson Group",
+      "creditBal": "102.09"
     },
     {
-      "vendorId": "f6a",
-      "vendorName": "Vandervort and Sons",
-      "creditBal": "392.42"
+      "vendorId": "7u2",
+      "vendorName": "Yundt - Grimes",
+      "creditBal": "358.61"
     },
     {
-      "vendorId": "wz0",
-      "vendorName": "Wiegand - Murphy",
-      "creditBal": "275.53"
+      "vendorId": "ysw",
+      "vendorName": "Okuneva, Breitenberg and Sipes",
+      "creditBal": "256.53"
     },
     {
-      "vendorId": "je1",
-      "vendorName": "Robel, Labadie and Swaniawski",
-      "creditBal": "327.42"
+      "vendorId": "fy3",
+      "vendorName": "Armstrong - Jakubowski",
+      "creditBal": "320.79"
     },
     {
-      "vendorId": "i02",
-      "vendorName": "Littel Inc",
-      "creditBal": "177.85"
+      "vendorId": "opn",
+      "vendorName": "Cruickshank - Ruecker",
+      "creditBal": "482.73"
     },
     {
-      "vendorId": "aqf",
-      "vendorName": "Turcotte LLC",
-      "creditBal": "267.32"
+      "vendorId": "b05",
+      "vendorName": "McLaughlin, Ernser and Runolfsdottir",
+      "creditBal": "492.79"
     },
     {
-      "vendorId": "3or",
-      "vendorName": "Denesik LLC",
-      "creditBal": "519.45"
+      "vendorId": "q4v",
+      "vendorName": "Haag, DuBuque and Swaniawski",
+      "creditBal": "391.39"
     },
     {
-      "vendorId": "8kk",
-      "vendorName": "Fritsch, Smith and Cronin",
-      "creditBal": "596.07"
+      "vendorId": "r5o",
+      "vendorName": "Marks, Kulas and Rice",
+      "creditBal": "589.34"
     },
     {
-      "vendorId": "9in",
-      "vendorName": "D'Amore - Roob",
-      "creditBal": "226.35"
+      "vendorId": "k2f",
+      "vendorName": "Rippin - Stark",
+      "creditBal": "499.43"
     },
     {
-      "vendorId": "z2o",
-      "vendorName": "Howell Inc",
-      "creditBal": "522.13"
+      "vendorId": "9aq",
+      "vendorName": "Cartwright and Sons",
+      "creditBal": "542.52"
     }
   ],
   "app_config": {
@@ -274,8 +274,11 @@
           "sortingEnabled": true
         },
         {
-          "fieldName": "vendorId",
-          "displayName": "Vendor ID",
+          "fieldName": [
+            "vendor",
+            "vendorName"
+          ],
+          "displayName": "Vendor",
           "display": true,
           "filteringEnabled": false,
           "sortingEnabled": true

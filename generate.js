@@ -49,8 +49,8 @@ module.exports = function() {
                         "sortingEnabled" : true
                     },
                     {
-                        "fieldName": "vendorId",
-                        "displayName" : "Vendor ID",
+                        "fieldName": ["vendor", "vendorName"],
+                        "displayName" : "Vendor",
                         "display" : true,
                         "filteringEnabled" : false,
                         "sortingEnabled" : true

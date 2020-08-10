@@ -29,7 +29,11 @@ const Invoices = (props) => {
                 vendor: {...vendorsHash[invoice.vendorId]}
             }
         })
-        setInvoices(invoiceDetails);
+        console.log(invoiceDetails);
+        setInvoices({
+            data: invoiceDetails,
+            count: invoices.count
+        });
         // setVendors(vendors);
     }
 
@@ -45,9 +49,9 @@ const Invoices = (props) => {
             setState: setVendors
         })
         Promise.all([getInvoices, getVendors])
-            .then((invoices, vendors) => {
-                console.log(invoices.count, vendors);
-                // mergeProcessor(invoices, vendors);
+            .then((response) => {
+                console.log(response);
+                mergeProcessor(response[0], response[1]);
             })
         
     }, [params.get('page')])
@@ -58,12 +62,12 @@ const Invoices = (props) => {
     }, [])
 
     const getColumns = () => {
-        let columns = props.config.tableConfig.columns.map((column) => {
+        let columns = props.config.tableConfig.columns.map((column, index) => {
             if (column.display)
                 return {
                     title: column.displayName,
                     dataIndex: column.fieldName,
-                    key: column.fieldName,
+                    key: index,
                 };
             else
                 return null;
@@ -96,8 +100,9 @@ const Invoices = (props) => {
                         total: invoices.count,
                         current: params.get('page'),
                         onChange: (pageNo) => history.push(`?page=${pageNo}`),
-                        simple: true,
-                        position: 'bottomCenter'
+                        // simple: true,
+                        position: 'bottomCenter',
+                        size: 10
                     }}
                 />
                 : null}
