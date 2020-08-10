@@ -28,7 +28,7 @@ const PaymentModal = (props) => {
                 amountPayment: props.invoice.amountDue,
                 type: paymentMethod
             },
-            callback: (props) => {
+            callback: (callbackProps) => {
                 setConfirmLoading(false)
                 props.setVisible(false)
             }
