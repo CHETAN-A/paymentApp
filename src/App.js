@@ -10,7 +10,7 @@ import MainApp from './containers/MainApp/MainApp';
 import './App.css';
 
 const App = (props) => {
-
+  
   const [api,] = useState(new API());
   const [config, setConfig] = useState(null);
 
@@ -32,16 +32,18 @@ const App = (props) => {
             </label>
           </Link>
         </header>
-
-        <div className="container">
-          {config ?
-            <Switch>
-              <Route path='/invoices' component={() => <Invoices config={config} />} />
-              <Route path='/' component={() => <MainApp config={config} />} />
-              <Route component={Error404} />
-            </Switch>
-            : <Spin />}
-        </div>
+        <Route render={(history) => 
+          <div className="container">
+            {console.log(JSON.stringify(history))}
+            {config ?
+              <Switch>
+                <Route path={`${history.location.pathname.includes('paymentApp') ? '/paymentApp':''}/invoices`} component={() => <Invoices config={config} />} />
+                <Route path={`${history.location.pathname.includes('paymentApp') ? '/paymentApp':''}/`} component={() => <MainApp config={config} />} />
+                <Route component={Error404} />
+              </Switch>
+              : <Spin />}
+          </div>
+            }/>
       </div>
 
     </BrowserRouter>
