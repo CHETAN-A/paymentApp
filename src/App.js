@@ -15,9 +15,9 @@ const App = (props) => {
   const [config, setConfig] = useState(null);
 
   useEffect(() => {
-    api.appConfig({
-      props,
-      setState: setConfig
+    api.get({
+      url: '/app_config/',
+      callback: setConfig
     })
   }, [])
 

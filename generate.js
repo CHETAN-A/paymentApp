@@ -5,7 +5,7 @@ module.exports = function() {
         return faker.random.alphaNumeric(3)
     })
     return {
-        invoices: _.times(20, function (n) {
+        invoices: _.times(25, function (n) {
             return {
                 id: n,
                 vendorId: faker.random.arrayElement(vendorIds),
@@ -100,13 +100,21 @@ module.exports = function() {
                     "put": "/vendors/{id}",
                     "delete": "/vendors/{id}",
                 },
-                "creditPost" : {
-                    "get": "/credit"
+                "credit" : {
+                    "post": "/credit/apply/"
                 },
-                "paymentPost" : {
-                    "get": "/payment"
+                "payment" : {
+                    "post": "/payment/"
                 }
             },
+        },
+
+        payment: {
+
+        },
+
+        credit: {
+            
         }
     }
 }

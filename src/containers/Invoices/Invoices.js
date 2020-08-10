@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Space } from 'antd';
+import { Table, Space, Button } from 'antd';
 import { useHistory, useLocation } from 'react-router-dom';
 
 import API from '../../containers/API/API';
+import PaymentModal from './PaymentModal';
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -14,13 +15,17 @@ const Invoices = (props) => {
 
     const [api,] = useState(new API());
     const [invoices, setInvoices] = useState(null);
-    const [vendors, setVendors] = useState(null);
+    // const [vendors, setVendors] = useState(null);
     const [columns, setColumns] = useState(null);
+
+    const [paymentModal, setPaymentModal] = useState(false);
+    const [selectedInvoice, setSelectedInvoice] = useState(null);
 
     const mergeProcessor = (invoices, vendors) => {
         let vendorsHash = {};
         vendors.data.map(vendor => {
             vendorsHash[vendor.vendorId] = vendor;
+            return null;
         })
         let invoiceDetails = invoices.data.map(invoice => {
             return {
@@ -38,13 +43,13 @@ const Invoices = (props) => {
     useEffect(() => {
         const getInvoices = api.getAll({
             url: props.config.dataEndPoints.call2.getAll,
-            setState: setInvoices,
+            // setState: setInvoices,
             limit: 10,
-            page: params.get('page') | 0
+            page: params.get('page')
         });
         const getVendors = api.getAll({
             url: props.config.dataEndPoints.call3.getAll,
-            setState: setVendors
+            // setState: setVendors
         })
         Promise.all([getInvoices, getVendors])
             .then((response) => {
@@ -56,6 +61,11 @@ const Invoices = (props) => {
     useEffect(() => {
         setColumns(getColumns());
     }, [])
+
+    const paymentHandler = (invoice) => {
+        setSelectedInvoice(invoice);
+        setPaymentModal(true)
+    }
 
     const getColumns = () => {
         let columns = props.config.tableConfig.columns.map((column, index) => {
@@ -76,7 +86,11 @@ const Invoices = (props) => {
                     render: (text, record) => {
                         return (
                             <Space size="middle">
-                                <a>Pay</a>
+                                <Button type="primary"
+                                    onClick={() => paymentHandler(record)}
+                                    disabled={+record.amountDue === 0 ? true : false}>
+                                    Pay
+                                </Button>
                             </Space>
                         )
                     },
@@ -87,7 +101,14 @@ const Invoices = (props) => {
 
     return (
         <div>
-            {columns && invoices ?
+            <PaymentModal 
+                visible={paymentModal}
+                setVisible={setPaymentModal}
+                invoice={selectedInvoice}
+                endPoints={props.config.dataEndPoints}
+                applyCredit={props.config.tableConfig.adjustEnabled}
+                />
+            {columns !== null && invoices !== null ?
                 <Table
                     columns={columns}
                     dataSource={invoices.data}
