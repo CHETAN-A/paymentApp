@@ -1,7 +1,7 @@
 module.exports = function() {
     var faker = require("faker");
     var _ = require("lodash");
-    vendorIds = _.times(20, function (n) {
+    vendorIds = _.times(10, function (n) {
         return faker.random.alphaNumeric(3)
     })
     return {
