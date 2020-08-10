@@ -34,7 +34,6 @@ const App = (props) => {
             </Link>
           </header>
           <div className="container">
-            {console.log(JSON.stringify(history))}
             {config ?
               <Switch>
                 <Route path={`${history.location.pathname.includes('paymentApp') ? '/paymentApp' : ''}/invoices`} component={() => <Invoices config={config} />} />

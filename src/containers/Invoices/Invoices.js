@@ -18,7 +18,6 @@ const Invoices = (props) => {
     const [columns, setColumns] = useState(null);
 
     const mergeProcessor = (invoices, vendors) => {
-        console.log('merge', invoices, vendors);
         let vendorsHash = {};
         vendors.data.map(vendor => {
             vendorsHash[vendor.vendorId] = vendor;
@@ -29,7 +28,6 @@ const Invoices = (props) => {
                 vendor: {...vendorsHash[invoice.vendorId]}
             }
         })
-        console.log(invoiceDetails);
         setInvoices({
             data: invoiceDetails,
             count: invoices.count
@@ -50,14 +48,12 @@ const Invoices = (props) => {
         })
         Promise.all([getInvoices, getVendors])
             .then((response) => {
-                console.log(response);
                 mergeProcessor(response[0], response[1]);
             })
         
     }, [params.get('page')])
 
     useEffect(() => {
-        // console.log(`params ${params}`);
         setColumns(getColumns());
     }, [])
 
@@ -78,7 +74,6 @@ const Invoices = (props) => {
                     title: 'Action',
                     key: 'action',
                     render: (text, record) => {
-                        console.log(record.amountDue);
                         return (
                             <Space size="middle">
                                 <a>Pay</a>
