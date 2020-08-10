@@ -1,3 +1,7 @@
+## To view Github Host
+
+https://chetan-a.github.io/paymentApp/
+
 ## Package Installation
 npm i
 ## To run API Mock Server
